@@ -1,0 +1,10 @@
+# Data never goes in this repository: the datasets' terms forbid redistribution.
+data/
+*.wav
+*.mp4
+*.cha
+*.jsonl
+models/
+.env
+.venv/
+__pycache__/

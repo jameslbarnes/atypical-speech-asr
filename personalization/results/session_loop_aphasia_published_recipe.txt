@@ -1,0 +1,5 @@
+== all clips | all arms (speakers with 30 arrivals): clip-runs 1455, speakers ['1554', '1713', '1731', '1738', '1833', '1944']
+base      0 WER  32.2%  by order [32.7 31.7]  [1554:24 1713:15 1731:51 1738:38 1833:44 1944:28]
+loop     10 WER  28.9%  by order [28.5 29.4]  [1554:25 1713:17 1731:46 1738:37 1833:33 1944:26]  vs untuned -3.3 (-7.1 to -0.4) better in 4/6
+loop     30 WER  26.5%  by order [26.6 26.3]  [1554:27 1713:13 1731:42 1738:36 1833:29 1944:23]  vs untuned -5.7 (-9.6 to -2.8) better in 5/6
+

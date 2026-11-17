@@ -1,0 +1,160 @@
+clips 1079
+
+== L0 all clips: clips 1079
+zero     0  WER  28.1%  sub  9.9 del 12.3 ins   5.9  words 7580
+same     6  WER  35.8%  sub 11.5 del 16.1 ins   8.2  words 7580
+same    12  WER  41.5%  sub 12.1 del 18.3 ins  11.1  words 7580
+diff     6  WER  57.6%  sub 15.9 del 19.6 ins  22.0  words 7580
+diff    12  WER  63.6%  sub 16.4 del 19.6 ins  27.6  words 7580
+sameL3   6  WER  40.7%  sub 10.9 del 18.2 ins  11.7  words 7580
+   same6 - zero0: +7.7 pts (95% +0.8 to +14.5); better in 0/6 speakers
+   same12 - zero0: +13.3 pts (95% +4.5 to +23.0); better in 0/6 speakers
+   same6 - diff6: -21.8 pts (95% -31.4 to -13.0); better in 6/6 speakers
+   sameL36 - same6: +4.9 pts (95% -0.6 to +11.9); better in 1/6 speakers
+
+== L3 all clips: clips 1079
+zero     0  WER  35.1%  sub  9.6 del  4.3 ins  21.2  words 5774
+same     6  WER  38.3%  sub 11.4 del  4.8 ins  22.0  words 5774
+same    12  WER  43.6%  sub 12.5 del  6.3 ins  24.9  words 5774
+diff     6  WER  62.9%  sub 16.8 del  8.1 ins  38.0  words 5774
+diff    12  WER  70.1%  sub 17.5 del  7.6 ins  45.1  words 5774
+sameL3   6  WER  42.5%  sub 11.1 del  5.0 ins  26.4  words 5774
+   same6 - zero0: +3.2 pts (95% -6.4 to +12.2); better in 0/6 speakers
+   same12 - zero0: +8.5 pts (95% -3.0 to +21.4); better in 1/6 speakers
+   same6 - diff6: -24.6 pts (95% -37.8 to -12.9); better in 6/6 speakers
+   sameL36 - same6: +4.2 pts (95% -3.1 to +13.8); better in 3/6 speakers
+
+== L4 all clips: clips 1079
+zero     0  WER  34.8%  sub  9.2 del  4.4 ins  21.2  words 5776
+same     6  WER  37.9%  sub 11.1 del  4.8 ins  22.0  words 5776
+same    12  WER  43.3%  sub 12.2 del  6.3 ins  24.8  words 5776
+diff     6  WER  62.4%  sub 16.4 del  8.1 ins  38.0  words 5776
+diff    12  WER  69.8%  sub 17.2 del  7.6 ins  45.0  words 5776
+sameL3   6  WER  42.1%  sub 10.7 del  5.0 ins  26.4  words 5776
+   same6 - zero0: +3.1 pts (95% -6.4 to +12.1); better in 0/6 speakers
+   same12 - zero0: +8.5 pts (95% -3.0 to +21.4); better in 1/6 speakers
+   same6 - diff6: -24.6 pts (95% -37.8 to -12.9); better in 6/6 speakers
+   sameL36 - same6: +4.2 pts (95% -3.0 to +13.9); better in 3/6 speakers
+
+== runaway (hyp > 2x ref + 3 words, L0) and copied-from-example (shares a 4-word run with an example transcript that is not in the reference)
+zero     0  runaway 3  copied 0
+same     6  runaway 23  copied 57
+same    12  runaway 21  copied 60
+diff     6  runaway 79  copied 159
+diff    12  runaway 63  copied 149
+sameL3   6  runaway 20  copied 50
+clips with no runaway or copy in any condition: 802
+
+== L0 clips with no runaway/copy in any condition: clips 802
+zero     0  WER  21.7%  sub  8.1 del 11.7 ins   1.9  words 5643
+same     6  WER  24.3%  sub  7.9 del 14.9 ins   1.6  words 5643
+same    12  WER  24.5%  sub  7.7 del 15.4 ins   1.4  words 5643
+diff     6  WER  26.1%  sub  8.1 del 15.9 ins   2.1  words 5643
+diff    12  WER  25.8%  sub  8.1 del 15.9 ins   1.9  words 5643
+sameL3   6  WER  25.5%  sub  7.5 del 16.8 ins   1.2  words 5643
+   same6 - zero0: +2.6 pts (95% +1.7 to +3.6); better in 0/6 speakers
+   same12 - zero0: +2.8 pts (95% +1.9 to +3.8); better in 0/6 speakers
+   same6 - diff6: -1.8 pts (95% -2.8 to -0.7); better in 4/6 speakers
+   sameL36 - same6: +1.2 pts (95% +0.2 to +2.3); better in 1/6 speakers
+
+== L3 clips with no runaway/copy in any condition: clips 802
+zero     0  WER  25.6%  sub  7.6 del  3.9 ins  14.1  words 4416
+same     6  WER  24.0%  sub  7.6 del  4.1 ins  12.3  words 4416
+same    12  WER  23.4%  sub  7.6 del  4.2 ins  11.6  words 4416
+diff     6  WER  25.0%  sub  7.7 del  5.1 ins  12.2  words 4416
+diff    12  WER  23.8%  sub  7.8 del  4.5 ins  11.5  words 4416
+sameL3   6  WER  22.8%  sub  7.6 del  4.3 ins  10.8  words 4416
+   same6 - zero0: -1.6 pts (95% -2.6 to -0.6); better in 6/6 speakers
+   same12 - zero0: -2.2 pts (95% -3.2 to -1.1); better in 5/6 speakers
+   same6 - diff6: -1.0 pts (95% -2.2 to +0.2); better in 5/6 speakers
+   sameL36 - same6: -1.2 pts (95% -2.2 to -0.1); better in 5/6 speakers
+
+== L4 clips with no runaway/copy in any condition: clips 802
+zero     0  WER  25.1%  sub  7.1 del  3.9 ins  14.1  words 4416
+same     6  WER  23.4%  sub  7.1 del  4.1 ins  12.3  words 4416
+same    12  WER  23.1%  sub  7.2 del  4.2 ins  11.6  words 4416
+diff     6  WER  24.5%  sub  7.2 del  5.1 ins  12.2  words 4416
+diff    12  WER  23.4%  sub  7.4 del  4.5 ins  11.5  words 4416
+sameL3   6  WER  22.3%  sub  7.2 del  4.3 ins  10.8  words 4416
+   same6 - zero0: -1.7 pts (95% -2.7 to -0.7); better in 6/6 speakers
+   same12 - zero0: -2.0 pts (95% -3.1 to -1.0); better in 5/6 speakers
+   same6 - diff6: -1.0 pts (95% -2.2 to +0.2); better in 5/6 speakers
+   sameL36 - same6: -1.1 pts (95% -2.1 to -0.0); better in 5/6 speakers
+
+== L3 clean length 0-2 words: clips 307
+zero     0  WER  50.7%  sub 21.2 del  3.3 ins  26.2  words 424
+same     6  WER 102.8%  sub 24.5 del  2.8 ins  75.5  words 424
+same    12  WER  93.2%  sub 24.3 del  3.5 ins  65.3  words 424
+diff     6  WER 268.4%  sub 40.3 del  3.3 ins 224.8  words 424
+diff    12  WER 204.0%  sub 34.2 del  2.8 ins 167.0  words 424
+sameL3   6  WER 122.2%  sub 24.5 del  3.8 ins  93.9  words 424
+   same6 - zero0: +52.1 pts (95% +31.6 to +75.5); better in 0/6 speakers
+   same12 - zero0: +42.5 pts (95% +21.4 to +66.6); better in 1/6 speakers
+   same6 - diff6: -165.6 pts (95% -259.0 to -101.2); better in 5/6 speakers
+   sameL36 - same6: +19.3 pts (95% -28.8 to +101.4); better in 2/6 speakers
+
+== L3 clean length 0-2 words, no runaway/copy: clips 183
+zero     0  WER  39.5%  sub 14.0 del  2.6 ins  22.9  words 271
+same     6  WER  36.2%  sub 15.1 del  2.2 ins  18.8  words 271
+same    12  WER  35.4%  sub 15.5 del  3.3 ins  16.6  words 271
+diff     6  WER  46.5%  sub 17.0 del  4.4 ins  25.1  words 271
+diff    12  WER  40.6%  sub 17.3 del  3.3 ins  19.9  words 271
+sameL3   6  WER  33.6%  sub 15.1 del  3.7 ins  14.8  words 271
+   same6 - zero0: -3.3 pts (95% -9.3 to +2.2); better in 5/6 speakers
+   same12 - zero0: -4.1 pts (95% -10.1 to +1.2); better in 6/6 speakers
+   same6 - diff6: -10.3 pts (95% -17.7 to -3.8); better in 4/6 speakers
+   sameL36 - same6: -2.6 pts (95% -8.1 to +2.2); better in 4/6 speakers
+
+== L3 clean length 3-7 words: clips 522
+zero     0  WER  38.0%  sub 10.8 del  5.0 ins  22.2  words 2496
+same     6  WER  33.5%  sub 11.9 del  5.1 ins  16.5  words 2496
+same    12  WER  39.8%  sub 12.7 del  5.1 ins  22.0  words 2496
+diff     6  WER  53.5%  sub 16.0 del  4.8 ins  32.8  words 2496
+diff    12  WER  67.6%  sub 16.5 del  4.3 ins  46.8  words 2496
+sameL3   6  WER  29.9%  sub 12.0 del  4.3 ins  13.6  words 2496
+   same6 - zero0: -4.5 pts (95% -19.2 to +3.8); better in 3/6 speakers
+   same12 - zero0: +1.8 pts (95% -17.2 to +21.0); better in 3/6 speakers
+   same6 - diff6: -20.0 pts (95% -40.9 to -5.4); better in 5/6 speakers
+   sameL36 - same6: -3.6 pts (95% -6.5 to -0.8); better in 4/6 speakers
+
+== L3 clean length 3-7 words, no runaway/copy: clips 432
+zero     0  WER  27.2%  sub  8.8 del  3.7 ins  14.7  words 2108
+same     6  WER  25.2%  sub  8.3 del  4.0 ins  12.9  words 2108
+same    12  WER  24.9%  sub  8.4 del  4.0 ins  12.5  words 2108
+diff     6  WER  24.7%  sub  8.2 del  4.2 ins  12.3  words 2108
+diff    12  WER  24.9%  sub  8.6 del  4.0 ins  12.3  words 2108
+sameL3   6  WER  23.8%  sub  8.4 del  3.5 ins  11.9  words 2108
+   same6 - zero0: -1.9 pts (95% -3.5 to -0.5); better in 5/6 speakers
+   same12 - zero0: -2.3 pts (95% -4.0 to -0.7); better in 5/6 speakers
+   same6 - diff6: +0.6 pts (95% -1.0 to +2.1); better in 2/6 speakers
+   sameL36 - same6: -1.5 pts (95% -2.8 to -0.0); better in 5/6 speakers
+
+== L3 clean length 8-999 words: clips 250
+zero     0  WER  30.3%  sub  6.8 del  3.8 ins  19.7  words 2854
+same     6  WER  32.9%  sub  9.1 del  4.8 ins  19.0  words 2854
+same    12  WER  39.6%  sub 10.5 del  7.7 ins  21.3  words 2854
+diff     6  WER  40.5%  sub 14.0 del 11.8 ins  14.8  words 2854
+diff    12  WER  52.4%  sub 15.8 del 11.1 ins  25.5  words 2854
+sameL3   6  WER  41.6%  sub  8.4 del  5.7 ins  27.5  words 2854
+   same6 - zero0: +2.6 pts (95% -12.6 to +17.9); better in 2/6 speakers
+   same12 - zero0: +9.3 pts (95% -7.6 to +26.5); better in 0/6 speakers
+   same6 - diff6: -7.7 pts (95% -21.8 to +6.5); better in 4/6 speakers
+   sameL36 - same6: +8.7 pts (95% -2.1 to +24.4); better in 2/6 speakers
+
+== L3 clean length 8-999 words, no runaway/copy: clips 187
+zero     0  WER  22.1%  sub  5.5 del  4.4 ins  12.2  words 2037
+same     6  WER  21.0%  sub  5.8 del  4.4 ins  10.8  words 2037
+same    12  WER  20.4%  sub  5.7 del  4.6 ins  10.1  words 2037
+diff     6  WER  22.4%  sub  5.9 del  6.1 ins  10.3  words 2037
+diff    12  WER  20.5%  sub  5.7 del  5.1 ins   9.7  words 2037
+sameL3   6  WER  20.3%  sub  5.8 del  5.3 ins   9.3  words 2037
+   same6 - zero0: -1.1 pts (95% -2.5 to +0.3); better in 5/6 speakers
+   same12 - zero0: -1.7 pts (95% -3.2 to -0.4); better in 4/6 speakers
+   same6 - diff6: -1.4 pts (95% -3.4 to +0.2); better in 4/6 speakers
+   sameL36 - same6: -0.7 pts (95% -2.1 to +1.2); better in 3/6 speakers
+zero     0 mean example audio   0.0 s  mean secs per clip 1.61
+same     6 mean example audio  28.9 s  mean secs per clip 2.18
+same    12 mean example audio  58.2 s  mean secs per clip 2.96
+diff     6 mean example audio  31.3 s  mean secs per clip 2.42
+diff    12 mean example audio  62.6 s  mean secs per clip 3.29
+sameL3   6 mean example audio  28.7 s  mean secs per clip 1.11

@@ -1,0 +1,33 @@
+systems ['nemotron_1120_en', 'nemotron_320_auto', 'nemotron_320_en', 'r2t2_offline', 'r2t2_stream', 'whisper_large_v3'] clips scored on all: 2360
+
+== dysarthric speakers, sentences: clips 714
+nemotron_1120_en     WER   46.8%  ins   1.6  exact 28.9%  empty  73  [F01:79 F03:20 F04:5 M01:75 M02:73 M03:3 M04:87 M05:69]
+nemotron_320_auto    WER   50.8%  ins   1.7  exact 27.3%  empty 113  [F01:80 F03:23 F04:6 M01:79 M02:81 M03:4 M04:91 M05:76]
+nemotron_320_en      WER   49.1%  ins   1.9  exact 27.2%  empty  85  [F01:74 F03:23 F04:6 M01:77 M02:77 M03:4 M04:87 M05:74]
+r2t2_offline         WER   27.7%  ins   3.4  exact 45.8%  empty   0  [F01:48 F03:7 F04:2 M01:53 M02:41 M03:2 M04:74 M05:22]
+r2t2_stream          WER   34.6%  ins   7.0  exact 38.4%  empty   0  [F01:58 F03:12 F04:3 M01:65 M02:55 M03:2 M04:78 M05:34]
+whisper_large_v3     WER   29.1%  ins   6.6  exact 45.9%  empty   1  [F01:60 F03:12 F04:2 M01:55 M02:43 M03:1 M04:74 M05:22]
+
+== dysarthric speakers, words: clips 480
+nemotron_1120_en     WER   71.0%  ins   7.9  exact 35.2%  empty  61  [F01:97 F03:63 F04:28 M01:90 M02:100 M03:22 M04:87 M05:80]
+nemotron_320_auto    WER   72.2%  ins   6.0  exact 33.1%  empty  93  [F01:88 F03:63 F04:37 M01:85 M02:98 M03:27 M04:87 M05:92]
+nemotron_320_en      WER   72.6%  ins   8.1  exact 32.9%  empty  64  [F01:90 F03:70 F04:30 M01:93 M02:90 M03:30 M04:90 M05:87]
+r2t2_offline         WER   55.4%  ins   2.9  exact 47.3%  empty  26  [F01:85 F03:32 F04:15 M01:77 M02:75 M03:12 M04:82 M05:65]
+r2t2_stream          WER   55.0%  ins   2.7  exact 47.1%  empty  26  [F01:85 F03:35 F04:17 M01:75 M02:72 M03:12 M04:79 M05:65]
+whisper_large_v3     WER   92.1%  ins  35.5  exact 41.9%  empty   4  [F01:97 F03:48 F04:20 M01:195 M02:85 M03:13 M04:198 M05:78]
+
+== control speakers, sentences: clips 746
+nemotron_1120_en     WER    4.0%  ins   0.4  exact 81.4%  empty   0  [FC01:2 FC02:1 FC03:5 MC01:3 MC02:8 MC03:3 MC04:4]
+nemotron_320_auto    WER    6.5%  ins   0.4  exact 76.7%  empty  10  [FC01:2 FC02:2 FC03:7 MC01:4 MC02:11 MC03:4 MC04:12]
+nemotron_320_en      WER    5.3%  ins   0.4  exact 78.2%  empty   3  [FC01:2 FC02:1 FC03:6 MC01:4 MC02:11 MC03:3 MC04:7]
+r2t2_offline         WER    1.7%  ins   0.3  exact 91.6%  empty   0  [FC01:0 FC02:1 FC03:3 MC01:1 MC02:1 MC03:2 MC04:2]
+r2t2_stream          WER    2.5%  ins   0.5  exact 87.3%  empty   0  [FC01:1 FC02:1 FC03:4 MC01:2 MC02:3 MC03:2 MC04:3]
+whisper_large_v3     WER    1.9%  ins   0.3  exact 90.6%  empty   0  [FC01:1 FC02:2 FC03:3 MC01:1 MC02:3 MC03:1 MC04:1]
+
+== control speakers, words: clips 420
+nemotron_1120_en     WER   36.1%  ins   0.7  exact 64.0%  empty  27  [FC01:27 FC02:38 FC03:35 MC01:38 MC02:52 MC03:33 MC04:28]
+nemotron_320_auto    WER   46.8%  ins   3.3  exact 55.5%  empty  43  [FC01:33 FC02:40 FC03:40 MC01:48 MC02:79 MC03:42 MC04:45]
+nemotron_320_en      WER   44.9%  ins   3.6  exact 56.4%  empty  36  [FC01:33 FC02:45 FC03:47 MC01:40 MC02:62 MC03:40 MC04:47]
+r2t2_offline         WER   23.3%  ins   0.2  exact 76.9%  empty  15  [FC01:17 FC02:23 FC03:13 MC01:22 MC02:39 MC03:17 MC04:32]
+r2t2_stream          WER   23.3%  ins   0.2  exact 76.9%  empty  15  [FC01:17 FC02:23 FC03:12 MC01:22 MC02:38 MC03:18 MC04:33]
+whisper_large_v3     WER   29.0%  ins   1.9  exact 73.1%  empty   0  [FC01:13 FC02:33 FC03:27 MC01:20 MC02:51 MC03:28 MC04:30]

@@ -1,0 +1,7 @@
+sentence clips 240
+untuned none      raw   54.6%  echoed   0  guarded  54.6%  [M01:67 M02:55 M04:83 M05:31]
+untuned hotright  raw   92.9%  echoed  35  guarded  46.8%  [M01:58 M02:45 M04:76 M05:25]
+untuned hotwrong  raw  100.1%  echoed  34  guarded  54.1%  [M01:64 M02:54 M04:86 M05:31]  unsaid wrong words after guard 18
+tuned   none      raw   49.4%  echoed   0  guarded  49.4%  [M01:56 M02:55 M04:66 M05:32]
+tuned   hotright  raw   82.4%  echoed  39  guarded  38.4%  [M01:35 M02:42 M04:60 M05:26]
+tuned   hotwrong  raw   97.4%  echoed  36  guarded  50.2%  [M01:62 M02:54 M04:67 M05:30]  unsaid wrong words after guard 21

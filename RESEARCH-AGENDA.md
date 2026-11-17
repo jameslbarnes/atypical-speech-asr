@@ -63,7 +63,7 @@ Four AI research agents first gathered the evidence on each path. Nine AI judges
 
 The bar, set before any run: on real errors from held-out speakers, the detector must clearly beat the best outside signal measured on the same errors. (The 0.71–0.76 we measured for flagging utterances that contain any error is a different task, so it is background, not the bar.) If it doesn't, we'll publish that.
 
-**2. Personalization for dysarthria (P7).** In aphasia, a few of a speaker's own utterances barely helped (see [`personalization/`](personalization/)). A dysarthric speaker's errors are more consistent, so the same loop should do more.
+**2. Personalization that works live (P7, P6).** In aphasia, a few of a speaker's own utterances barely helped (see [`personalization/`](personalization/)). In dysarthria, thirty confirmed sentences cut Whisper's word error by a third, and adapting only a streaming recognizer's audio encoder helped live (see [`dysarthria/`](dysarthria/)). Next: the same in conversation rather than read prompts, a growth curve for the live recognizer, and word lists that can't end up in the transcript as speech.
 
 **3. Correction in real time (P2, P6).** Several recognizers and a fast language model, inside the delay of a live conversation, returning both what was said and what was meant, with the word-for-word transcript always kept beside the corrected one.
 

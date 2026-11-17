@@ -1,0 +1,127 @@
+clips 1194 with every condition 1194
+
+== all clips: clips 1194
+whisper  0 WER   38.8%  ins  13.3  exact 44.1%  runaway   3 copied   0  [F01:68 F03:14 F04:3 M01:58 M02:46 M03:2 M04:129 M05:26]
+zero     0 WER   61.2%  ins  31.4  exact 39.9%  runaway  15 copied   0  [F01:74 F03:15 F04:4 M01:96 M02:57 M03:3 M04:244 M05:34]
+same     6 WER   66.5%  ins  35.9  exact 42.0%  runaway  66 copied  89  [F01:145 F03:13 F04:3 M01:114 M02:61 M03:3 M04:255 M05:27]
+same    12 WER   56.4%  ins  25.3  exact 42.0%  runaway  56 copied  98  [F01:164 F03:13 F04:3 M01:77 M02:60 M03:3 M04:204 M05:27]
+diff     6 WER   61.8%  ins  29.4  exact 39.3%  runaway  95 copied 130  [F01:135 F03:24 F04:15 M01:114 M02:90 M03:7 M04:138 M05:44]
+diff    12 WER   56.2%  ins  20.7  exact 38.6%  runaway  75 copied 148  [F01:121 F03:26 F04:13 M01:93 M02:88 M03:7 M04:116 M05:48]
+samev    6 WER   51.7%  ins  14.9  exact 41.4%  runaway  40 copied 127  [F01:95 F03:17 F04:4 M01:99 M02:75 M03:3 M04:140 M05:34]
+samev   12 WER   50.4%  ins   9.9  exact 40.8%  runaway  17 copied 117  [F01:91 F03:17 F04:4 M01:90 M02:73 M03:3 M04:130 M05:43]
+   same6 - zero0: +5.3 pts (95% clip bootstrap -9.7 to +20.7); better in 4/8 speakers
+   same12 - zero0: -4.8 pts (95% clip bootstrap -19.3 to +9.8); better in 6/8 speakers
+   same6 - diff6: +4.7 pts (95% clip bootstrap -7.6 to +18.8); better in 6/8 speakers
+   same12 - diff12: +0.2 pts (95% clip bootstrap -9.0 to +10.8); better in 6/8 speakers
+   samev6 - same6: -14.8 pts (95% clip bootstrap -27.0 to -4.2); better in 4/8 speakers
+   same12 - whisper0: +17.6 pts (95% clip bootstrap +2.6 to +31.9); better in 1/8 speakers
+   zero0 - whisper0: +22.4 pts (95% clip bootstrap +6.9 to +38.1); better in 0/8 speakers
+
+== sentences: clips 714
+whisper  0 WER   32.2%  ins   9.7  exact 45.9%  runaway   2 copied   0  [F01:60 F03:12 F04:2 M01:55 M02:43 M03:1 M04:99 M05:22]
+zero     0 WER   60.4%  ins  33.7  exact 43.0%  runaway  15 copied   0  [F01:67 F03:12 F04:3 M01:96 M02:54 M03:2 M04:258 M05:31]
+same     6 WER   59.0%  ins  31.3  exact 45.4%  runaway  19 copied  42  [F01:62 F03:9 F04:2 M01:105 M02:57 M03:1 M04:253 M05:22]
+same    12 WER   48.1%  ins  19.8  exact 45.4%  runaway   9 copied  49  [F01:74 F03:10 F04:2 M01:65 M02:55 M03:1 M04:202 M05:22]
+diff     6 WER   46.2%  ins  16.9  exact 43.8%  runaway   9 copied  45  [F01:66 F03:14 F04:10 M01:84 M02:68 M03:3 M04:131 M05:30]
+diff    12 WER   43.6%  ins  11.0  exact 42.7%  runaway   6 copied  80  [F01:68 F03:16 F04:7 M01:73 M02:71 M03:3 M04:112 M05:36]
+samev    6 WER   45.3%  ins  10.8  exact 43.7%  runaway   6 copied  93  [F01:63 F03:12 F04:3 M01:86 M02:71 M03:1 M04:135 M05:28]
+samev   12 WER   46.3%  ins   7.6  exact 42.2%  runaway   5 copied 106  [F01:83 F03:12 F04:4 M01:83 M02:71 M03:2 M04:128 M05:37]
+   same6 - zero0: -1.4 pts (95% clip bootstrap -17.5 to +14.8); better in 6/8 speakers
+   same12 - zero0: -12.3 pts (95% clip bootstrap -28.0 to +2.4); better in 6/8 speakers
+   same6 - diff6: +12.9 pts (95% clip bootstrap -0.4 to +27.2); better in 6/8 speakers
+   same12 - diff12: +4.6 pts (95% clip bootstrap -4.9 to +15.5); better in 6/8 speakers
+   samev6 - same6: -13.7 pts (95% clip bootstrap -26.3 to -1.6); better in 2/8 speakers
+   same12 - whisper0: +15.9 pts (95% clip bootstrap +2.3 to +28.5); better in 2/8 speakers
+   zero0 - whisper0: +28.2 pts (95% clip bootstrap +14.5 to +43.2); better in 0/8 speakers
+
+== single words and two-word items: clips 480
+whisper  0 WER  111.4%  ins  53.4  exact 41.5%  runaway   1 copied   0  [F01:93 F03:48 F04:20 M01:97 M02:85 M03:13 M04:465 M05:70]
+zero     0 WER   70.1%  ins   5.2  exact 35.2%  runaway   0 copied   0  [F01:95 F03:65 F04:23 M01:97 M02:90 M03:20 M04:92 M05:78]
+same     6 WER  149.1%  ins  86.7  exact 37.1%  runaway  47 copied  47  [F01:400 F03:67 F04:20 M01:211 M02:105 M03:22 M04:277 M05:90]
+same    12 WER  147.8%  ins  85.2  exact 37.1%  runaway  47 copied  49  [F01:438 F03:55 F04:18 M01:210 M02:110 M03:20 M04:232 M05:98]
+diff     6 WER  234.5%  ins 167.2  exact 32.5%  runaway  86 copied  85  [F01:348 F03:175 F04:65 M01:443 M02:335 M03:58 M04:215 M05:233]
+diff    12 WER  195.6%  ins 128.5  exact 32.5%  runaway  69 copied  68  [F01:283 F03:175 F04:88 M01:307 M02:278 M03:63 M04:162 M05:207]
+samev    6 WER  121.6%  ins  59.7  exact 37.9%  runaway  34 copied  34  [F01:195 F03:80 F04:18 M01:236 M02:120 M03:17 M04:193 M05:112]
+samev   12 WER   95.4%  ins  34.3  exact 38.8%  runaway  12 copied  11  [F01:117 F03:82 F04:15 M01:164 M02:95 M03:18 M04:152 M05:120]
+   same6 - zero0: +79.0 pts (95% clip bootstrap +58.0 to +100.6); better in 1/8 speakers
+   same12 - zero0: +77.8 pts (95% clip bootstrap +57.0 to +99.4); better in 2/8 speakers
+   same6 - diff6: -85.4 pts (95% clip bootstrap -131.5 to -48.0); better in 6/8 speakers
+   same12 - diff12: -47.8 pts (95% clip bootstrap -78.0 to -18.3); better in 6/8 speakers
+   samev6 - same6: -27.4 pts (95% clip bootstrap -47.3 to -7.5); better in 4/8 speakers
+   same12 - whisper0: +36.4 pts (95% clip bootstrap -70.7 to +99.2); better in 2/8 speakers
+   zero0 - whisper0: -41.4 pts (95% clip bootstrap -137.9 to +8.5); better in 1/8 speakers
+
+== all clips: clips 1194  [copy guard on]
+whisper  0 WER   38.8%  ins  13.3  exact 44.1%  runaway   3 copied   0  [F01:68 F03:14 F04:3 M01:58 M02:46 M03:2 M04:129 M05:26]
+zero     0 WER   61.2%  ins  31.4  exact 39.9%  runaway  15 copied   0  [F01:74 F03:15 F04:4 M01:96 M02:57 M03:3 M04:244 M05:34]
+same     6 WER   65.1%  ins  36.7  exact 42.0%  runaway  66 copied  89  [F01:73 F03:12 F04:3 M01:101 M02:57 M03:3 M04:286 M05:26]
+same    12 WER   59.8%  ins  30.9  exact 42.0%  runaway  56 copied  98  [F01:71 F03:12 F04:3 M01:83 M02:56 M03:3 M04:264 M05:25]
+diff     6 WER   59.9%  ins  30.5  exact 39.3%  runaway  95 copied 130  [F01:79 F03:14 F04:12 M01:94 M02:72 M03:3 M04:209 M05:36]
+diff    12 WER   58.1%  ins  28.8  exact 38.6%  runaway  75 copied 148  [F01:74 F03:17 F04:7 M01:73 M02:67 M03:4 M04:225 M05:36]
+samev    6 WER   53.3%  ins  22.3  exact 41.4%  runaway  40 copied 127  [F01:70 F03:13 F04:4 M01:80 M02:60 M03:3 M04:202 M05:31]
+samev   12 WER   54.3%  ins  21.2  exact 40.8%  runaway  17 copied 117  [F01:74 F03:13 F04:4 M01:94 M02:58 M03:3 M04:196 M05:31]
+   same6 - zero0: +3.9 pts (95% clip bootstrap -9.1 to +17.7); better in 5/8 speakers
+   same12 - zero0: -1.4 pts (95% clip bootstrap -11.5 to +8.9); better in 7/8 speakers
+   same6 - diff6: +5.2 pts (95% clip bootstrap -8.2 to +19.9); better in 6/8 speakers
+   same12 - diff12: +1.7 pts (95% clip bootstrap -9.7 to +13.7); better in 6/8 speakers
+   samev6 - same6: -11.8 pts (95% clip bootstrap -23.9 to -0.7); better in 4/8 speakers
+   same12 - whisper0: +21.0 pts (95% clip bootstrap +6.2 to +35.7); better in 2/8 speakers
+   zero0 - whisper0: +22.4 pts (95% clip bootstrap +6.9 to +38.1); better in 0/8 speakers
+
+== sentences: clips 714  [copy guard on]
+whisper  0 WER   32.2%  ins   9.7  exact 45.9%  runaway   2 copied   0  [F01:60 F03:12 F04:2 M01:55 M02:43 M03:1 M04:99 M05:22]
+zero     0 WER   60.4%  ins  33.7  exact 43.0%  runaway  15 copied   0  [F01:67 F03:12 F04:3 M01:96 M02:54 M03:2 M04:258 M05:31]
+same     6 WER   64.2%  ins  38.8  exact 45.4%  runaway  19 copied  42  [F01:62 F03:9 F04:2 M01:100 M02:54 M03:2 M04:302 M05:22]
+same    12 WER   58.6%  ins  32.7  exact 45.4%  runaway   9 copied  49  [F01:62 F03:9 F04:2 M01:79 M02:53 M03:2 M04:279 M05:21]
+diff     6 WER   54.9%  ins  28.7  exact 43.8%  runaway   9 copied  45  [F01:61 F03:10 F04:10 M01:78 M02:64 M03:2 M04:217 M05:31]
+diff    12 WER   54.9%  ins  28.8  exact 42.7%  runaway   6 copied  80  [F01:60 F03:12 F04:4 M01:64 M02:66 M03:2 M04:236 M05:30]
+samev    6 WER   51.5%  ins  23.3  exact 43.7%  runaway   6 copied  93  [F01:58 F03:10 F04:3 M01:77 M02:58 M03:2 M04:210 M05:28]
+samev   12 WER   52.8%  ins  22.2  exact 42.2%  runaway   5 copied 106  [F01:68 F03:10 F04:4 M01:90 M02:56 M03:2 M04:205 M05:29]
+   same6 - zero0: +3.8 pts (95% clip bootstrap -10.8 to +18.6); better in 5/8 speakers
+   same12 - zero0: -1.8 pts (95% clip bootstrap -12.6 to +8.8); better in 7/8 speakers
+   same6 - diff6: +9.3 pts (95% clip bootstrap -5.1 to +24.5); better in 4/8 speakers
+   same12 - diff12: +3.7 pts (95% clip bootstrap -8.5 to +16.7); better in 5/8 speakers
+   samev6 - same6: -12.7 pts (95% clip bootstrap -26.1 to +0.0); better in 3/8 speakers
+   same12 - whisper0: +26.4 pts (95% clip bootstrap +13.3 to +40.6); better in 2/8 speakers
+   zero0 - whisper0: +28.2 pts (95% clip bootstrap +14.5 to +43.2); better in 0/8 speakers
+
+== words: clips 480  [copy guard on]
+whisper  0 WER  111.4%  ins  53.4  exact 41.5%  runaway   1 copied   0  [F01:93 F03:48 F04:20 M01:97 M02:85 M03:13 M04:465 M05:70]
+zero     0 WER   70.1%  ins   5.2  exact 35.2%  runaway   0 copied   0  [F01:95 F03:65 F04:23 M01:97 M02:90 M03:20 M04:92 M05:78]
+same     6 WER   75.3%  ins  13.5  exact 37.1%  runaway  47 copied  47  [F01:107 F03:58 F04:20 M01:113 M02:87 M03:22 M04:117 M05:78]
+same    12 WER   73.0%  ins  11.6  exact 37.1%  runaway  47 copied  49  [F01:98 F03:55 F04:18 M01:125 M02:93 M03:20 M04:95 M05:78]
+diff     6 WER  114.8%  ins  50.5  exact 32.5%  runaway  86 copied  85  [F01:135 F03:75 F04:25 M01:267 M02:165 M03:25 M04:117 M05:107]
+diff    12 WER   93.1%  ins  28.9  exact 32.5%  runaway  69 copied  68  [F01:120 F03:80 F04:45 M01:164 M02:85 M03:25 M04:105 M05:120]
+samev    6 WER   73.4%  ins  12.1  exact 37.9%  runaway  34 copied  34  [F01:105 F03:67 F04:18 M01:110 M02:83 M03:17 M04:108 M05:78]
+samev   12 WER   71.1%  ins  10.4  exact 38.8%  runaway  12 copied  11  [F01:93 F03:58 F04:15 M01:139 M02:83 M03:18 M04:93 M05:67]
+   same6 - zero0: +5.2 pts (95% clip bootstrap -1.2 to +12.1); better in 3/8 speakers
+   same12 - zero0: +2.9 pts (95% clip bootstrap -3.5 to +10.6); better in 2/8 speakers
+   same6 - diff6: -39.5 pts (95% clip bootstrap -80.0 to -12.3); better in 7/8 speakers
+   same12 - diff12: -20.2 pts (95% clip bootstrap -36.7 to -5.4); better in 7/8 speakers
+   samev6 - same6: -1.9 pts (95% clip bootstrap -9.1 to +4.8); better in 6/8 speakers
+   same12 - whisper0: -38.5 pts (95% clip bootstrap -136.2 to +13.9); better in 2/8 speakers
+   zero0 - whisper0: -41.4 pts (95% clip bootstrap -137.9 to +8.5); better in 1/8 speakers
+
+== clips where no condition ran away (after-the-fact selection): clips 982
+whisper  0 WER   26.9%  ins   4.8  exact 50.2%  runaway   0 copied   0  [F01:63 F03:12 F04:3 M01:56 M02:44 M03:2 M04:68 M05:22]
+zero     0 WER   31.6%  ins   5.9  exact 45.2%  runaway   0 copied   0  [F01:70 F03:14 F04:4 M01:61 M02:55 M03:3 M04:80 M05:27]
+same     6 WER   31.2%  ins   5.1  exact 48.5%  runaway   0 copied  33  [F01:65 F03:11 F04:3 M01:66 M02:56 M03:3 M04:81 M05:24]
+same    12 WER   31.9%  ins   5.3  exact 48.5%  runaway   0 copied  37  [F01:76 F03:12 F04:3 M01:65 M02:55 M03:3 M04:88 M05:24]
+diff     6 WER   34.3%  ins   6.5  exact 46.7%  runaway   0 copied  40  [F01:69 F03:17 F04:4 M01:65 M02:58 M03:5 M04:86 M05:30]
+diff    12 WER   37.4%  ins   6.3  exact 45.5%  runaway   0 copied  69  [F01:70 F03:19 F04:9 M01:68 M02:61 M03:5 M04:92 M05:35]
+samev    6 WER   35.8%  ins   3.5  exact 47.8%  runaway   0 copied  81  [F01:66 F03:15 F04:4 M01:77 M02:67 M03:2 M04:87 M05:29]
+samev   12 WER   38.9%  ins   2.7  exact 46.6%  runaway   0 copied  90  [F01:83 F03:14 F04:4 M01:81 M02:71 M03:3 M04:89 M05:38]
+   same6 - zero0: -0.5 pts (95% clip bootstrap -1.9 to +1.0); better in 5/8 speakers
+   same12 - zero0: +0.3 pts (95% clip bootstrap -1.2 to +1.9); better in 4/8 speakers
+   same6 - diff6: -3.1 pts (95% clip bootstrap -5.0 to -1.3); better in 7/8 speakers
+   same12 - diff12: -5.4 pts (95% clip bootstrap -7.5 to -3.4); better in 7/8 speakers
+   samev6 - same6: +4.6 pts (95% clip bootstrap +2.8 to +6.5); better in 1/8 speakers
+   same12 - whisper0: +5.0 pts (95% clip bootstrap +3.1 to +7.0); better in 1/8 speakers
+   zero0 - whisper0: +4.7 pts (95% clip bootstrap +2.8 to +6.6); better in 0/8 speakers
+zero     0 mean example audio   0.0 s  secs per request 2.34
+same     6 mean example audio  40.7 s  secs per request 3.66
+same    12 mean example audio  81.5 s  secs per request 4.73
+diff     6 mean example audio  40.1 s  secs per request 3.56
+diff    12 mean example audio  80.5 s  secs per request 4.81
+samev    6 mean example audio  40.7 s  secs per request 3.32
+samev   12 mean example audio  81.5 s  secs per request 4.43

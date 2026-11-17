@@ -8,6 +8,8 @@ Etherea is made by General Semantics, a creative research lab in New York. Most 
 
 ## What we've found so far
 
+### Aphasia
+
 These results come from six people with chronic aphasia after a stroke: 1,080 utterances, 70 minutes of conversation, from the open APROCSA recordings. Six speakers make a pilot, so read the intervals as well as the headline numbers.
 
 **1. The best open recognizer gets about one word in five wrong.** We ran ten open speech recognizers on the same utterances. Whisper large-v3 did best against a clean transcript, at 20.6% word error (95% interval 18.9–22.5). The top five sit within each other's intervals, at roughly 20–23%. Error rose with severity, from about 10–16% for the mildest speaker to 30–37% for the most severe.
@@ -22,7 +24,7 @@ These results come from six people with chronic aphasia after a stroke: 1,080 ut
 
 **6. Confidence scores only partly flag mistakes.** In the four recognizers that report a confidence for each word piece (the Parakeet and Nemotron models), the lowest confidence in an utterance picks out utterances containing any recognition error at an AUROC of 0.71–0.76, where 0.5 is chance.
 
-**7. Learning the speaker helped a little.** We retuned Whisper large-v3 separately for each speaker on their own confirmed utterances, adding one at a time, as a clinician's confirmations would arrive in a session. Pooled over the six speakers, error went from 20.7% to 18.6% after 30 utterances each (−2.1 points, interval −3.6 to −0.7, resampling clips rather than speakers) and didn't move before about ten. It didn't change how often the recognizer hides an error. In aphasia the wrong words tend to change from one attempt to the next, which likely leaves a per-speaker model little to learn. We expect more in dysarthria, where a speaker's errors are more consistent.
+**7. Learning the speaker helped a little.** We retuned Whisper large-v3 separately for each speaker on their own confirmed utterances, adding one at a time, as a clinician's confirmations would arrive in a session. Pooled over the six speakers, error went from 20.7% to 18.6% after 30 utterances each (−2.1 points, interval −3.6 to −0.7, resampling clips rather than speakers) and didn't move before about ten. It didn't change how often the recognizer hides an error. In aphasia the wrong words tend to change from one attempt to the next, which likely leaves a per-speaker model little to learn. Dysarthria, where a speaker's errors are more consistent, is a different story (finding 9).
 
 **8. What didn't help, on aphasia:**
 - Showing an audio language model a few of the speaker's own recordings with their transcripts, with no training (Phi-4 Multimodal, after Roll et al. 2025). It sometimes answered with one of the example sentences: 35.1% with no examples, 38.3% with six.
@@ -32,6 +34,20 @@ These results come from six people with chronic aphasia after a stroke: 1,080 ut
 
 Details, tables and the scripts behind each number are in [`aphasia-benchmark/`](aphasia-benchmark/) (findings 1–6, the correction memory, the rewrite and the word list) and [`personalization/`](personalization/) (finding 7 and the in-context examples).
 
+### Dysarthria and live recognition
+
+These results come from the TORGO database: 8 speakers with dysarthria (cerebral palsy or ALS) and 7 control speakers, reading words and sentences from prompts. Read speech is easier than conversation, and eight speakers make a small sample.
+
+**9. Learning the speaker pays off in dysarthria.** With the same session loop as in (7), retuning Whisper large-v3 on each speaker's confirmed sentences cut word error on new sentences from 27.6% to 20.6% after ten and 18.5% after thirty (−9.1 points, interval −11.3 to −7.2 over clip runs; seven speakers, three arrival orders). The two speakers with the highest starting error dropped by more than 40%, from 81% to 47% and from 57% to 31%. Replacing a fifth of the labels with the recognizer's own output reduced the gain only modestly. Training on the recognizer's own output, with no human, gave about half the ten-sentence gain and stopped there. These are exploratory: the learning rate was chosen on an earlier test with the same speakers.
+
+**10. A newer streaming recognizer does far better live.** Untuned, Confucius4-R2T2 streaming in 160 ms chunks made 34.6% word error on dysarthric sentences, against 50.8% for Nemotron 3.5 streaming as we had been running it (and 2.5% against 6.5% for the control speakers). Nemotron returned nothing at all for 113 of 714 dysarthric sentences.
+
+**11. Live, tuning only the audio encoder helped; tuning the language model too hurt.** Tuning Confucius on whole sentences, with an adapter on both its audio encoder and its language model, helped on whole clips but made live streaming worse (43.7% to 55.3%). An adapter on the audio encoder alone improved pooled live accuracy, 54.6% to 48.5% on the four speakers with the highest error, though not for every speaker. A tuned streaming model has to be scored through its live engine.
+
+**12. Word lists help, but end up in the transcript.** Given a list of likely words, Confucius sometimes wrote the list itself into the transcript. Without a safeguard, every list made results worse. With a guard that falls back to the transcript made without the list whenever the output repeats it, a list containing the right words cut error on the four speakers with the highest error from 54.6% to 46.8%, and to 38.4% together with tuning, while a list of wrong words under the same guard changed nothing. That right list was the best case: it contained the words actually said.
+
+Details, tables and scripts are in [`dysarthria/`](dysarthria/).
+
 ## What's next
 
 Our [research agenda](RESEARCH-AGENDA.md) ranks twelve open problems in recognition for people with speech disorders. The short version:
@@ -39,7 +55,7 @@ Our [research agenda](RESEARCH-AGENDA.md) ranks twelve open problems in recognit
 - **A recognizer that tells the truth about what was said.** We want to catch the moment a recognizer writes the word it expected instead of the word it heard, by reading the model's internal activity. In 700 sentences synthesized with text-to-speech, where the context pointed to the wrong word, Whisper wrote the expected word 21.8% of the time, and patching its internal activity restored the spoken word in 88.9% of those cases ([Glazer et al. 2025](https://arxiv.org/abs/2508.15882)). We found no study that tries this on disordered speech. Our bar, set in advance: on real errors from held-out speakers, the detector has to clearly beat the best signal available from outside the model, measured on the same errors.
 - **"I didn't catch that."** Confidence that means what it says on disordered speech, so a system asks instead of guessing. We found no published measurement of calibration on disordered speech.
 - **Correction in real time.** Several recognizers and a fast language model, inside the latency of a live conversation, returning both what was said and what was meant.
-- **Dysarthria and more speakers.** Six speakers is a pilot. Next come dysarthric speech, children's speech and larger multi-speaker datasets.
+- **Conversation and more speakers.** Six aphasia speakers, and eight dysarthria speakers reading prompts, make a pilot. Next come conversational speech, children's speech and larger datasets with many speakers.
 
 ## Data
 
@@ -52,12 +68,18 @@ We use datasets under their owners' terms and publish aggregate numbers only: no
 
 `aphasia-benchmark/scripts/fetch_aprocsa.sh` downloads the six recordings and transcripts from the authors' site.
 
+**TORGO** (dysarthria; 8 speakers with dysarthria and 7 control speakers, from the [University of Toronto](https://www.cs.toronto.edu/~complingweb/data/TORGO/torgo.html)). Publications must cite at least one of its papers; we cite:
+
+- Rudzicz, F., Namasivayam, A. K., & Wolff, T. (2012). The TORGO database of acoustic and articulatory speech from speakers with dysarthria. *Language Resources and Evaluation, 46*(4), 523–541.
+- Rudzicz, F., Hirst, G., & van Lieshout, P. (2012). Vocal tract representation in the recognition of cerebral palsied speech. *Journal of Speech, Language, and Hearing Research, 55*(4), 1190–1207.
+
 ## What's here
 
 | Folder | What it holds |
 |---|---|
 | [`aphasia-benchmark/`](aphasia-benchmark/) | Ten open recognizers on aphasic speech, scored against five kinds of reference transcript; the language-model layers that read several transcripts, the correction memory, the rewrite and the word-list check. |
 | [`personalization/`](personalization/) | Adapting a recognizer to one speaker: retuning Whisper on confirmed utterances as they arrive, and in-context examples with Phi-4 Multimodal. |
+| [`dysarthria/`](dysarthria/) | Learning one dysarthric speaker, live recognition with Confucius4-R2T2 and Nemotron, and word lists. |
 | [`RESEARCH-AGENDA.md`](RESEARCH-AGENDA.md) | The open problems, how we ranked them, and what we'd measure first. |
 
 Each folder's README says how to run its scripts. The scripts are research code, kept as they were run (on a shared CPU, or on single rented GPUs whose disks were deleted afterwards), with local paths replaced by settings.

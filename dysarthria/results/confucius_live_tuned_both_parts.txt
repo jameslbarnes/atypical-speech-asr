@@ -1,0 +1,14 @@
+speaker kind      clips  untuned-live  tuned-live  untuned-whole  tuned-whole
+F01     word         60         85.0        88.3           85.0         86.7
+F03     sentence     88         12.7        18.4            8.0          8.2
+F03     word         60         35.0        33.3           31.7         36.7
+M01     sentence     56         67.1        74.8           54.3         45.0
+M01     word         60         75.0        90.0           73.3         83.3
+M02     sentence     59         54.8        65.9           43.7         36.5
+M02     word         60         72.1        75.4           75.4         70.5
+M04     sentence     41         82.5        97.0           74.3         53.6
+M04     word         60         78.7       113.1           82.0         72.1
+M05     sentence     84         31.1        50.1           18.0         15.6
+M05     word         60         65.0        68.3           63.3         66.7
+ALL     sentence    328         43.7         55.3         33.9         27.6
+ALL     word        360         68.5         78.2         68.5         69.3

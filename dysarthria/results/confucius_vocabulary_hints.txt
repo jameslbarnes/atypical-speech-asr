@@ -1,0 +1,6 @@
+sentence clips 328
+no hint    raw WER  43.7%  echoed hint on   0  with guard  43.7%  unsaid wrong-list words   24  [F03:13 M01:67 M02:55 M04:83 M05:31]
+bare       raw WER 116.1%  echoed hint on  90  with guard  39.3%  unsaid wrong-list words 2071  [F03:52 M01:92 M02:111 M04:160 M05:178]
+hot        raw WER  75.4%  echoed hint on  39  with guard  37.5%  unsaid wrong-list words 1022  [F03:25 M01:76 M02:77 M04:95 M05:115]
+short      raw WER  62.9%  echoed hint on 123  with guard  36.7%  unsaid wrong-list words  626  [F03:38 M01:58 M02:62 M04:87 M05:80]
+wrongbare  raw WER 110.1%  echoed hint on  68  with guard  44.9%  unsaid wrong-list words 1875  [F03:50 M01:102 M02:99 M04:158 M05:159]

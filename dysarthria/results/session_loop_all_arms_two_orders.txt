@@ -1,0 +1,78 @@
+
+== all clips | arms up to 10 (all speakers): clip-runs 1762, speakers ['F03', 'F04', 'M01', 'M02', 'M03', 'M04', 'M05']
+base      0 WER  33.0%  by order [33.3 32.7]  [F03:15 F04:4 M01:64 M02:47 M03:3 M04:99 M05:27]
+loop      1 WER  32.9%  by order [32.5 33.4]  [F03:15 F04:3 M01:61 M02:47 M03:3 M04:90 M05:35]  vs untuned -0.1 (-2.6 to +2.7) better in 4/7
+loop      3 WER  31.5%  by order [31.5 31.6]  [F03:14 F04:4 M01:54 M02:45 M03:3 M04:90 M05:34]  vs untuned -1.5 (-4.2 to +1.7) better in 5/7
+loop      5 WER  28.1%  by order [27.8 28.3]  [F03:16 F04:3 M01:49 M02:41 M03:5 M04:75 M05:26]  vs untuned -5.0 (-7.4 to -2.8) better in 5/7
+loop     10 WER  26.1%  by order [26.6 25.6]  [F03:15 F04:4 M01:41 M02:39 M03:4 M04:74 M05:24]  vs untuned -6.9 (-9.5 to -4.9) better in 4/7
+noise20  10 WER  27.1%  by order [27.1 27.2]  [F03:14 F04:3 M01:45 M02:41 M03:3 M04:80 M05:24]  vs untuned -5.9 (-7.9 to -4.3) better in 6/7
+self     10 WER  29.5%  by order [30.3 28.8]  [F03:14 F04:4 M01:58 M02:43 M03:3 M04:84 M05:25]  vs untuned -3.5 (-5.7 to -1.8) better in 5/7
+
+== all clips | all arms (speakers with 30 arrivals): clip-runs 1762, speakers ['F03', 'F04', 'M01', 'M02', 'M03', 'M04', 'M05']
+base      0 WER  33.0%  by order [33.3 32.7]  [F03:15 F04:4 M01:64 M02:47 M03:3 M04:99 M05:27]
+loop      1 WER  32.9%  by order [32.5 33.4]  [F03:15 F04:3 M01:61 M02:47 M03:3 M04:90 M05:35]  vs untuned -0.1 (-2.6 to +2.7) better in 4/7
+loop      3 WER  31.5%  by order [31.5 31.6]  [F03:14 F04:4 M01:54 M02:45 M03:3 M04:90 M05:34]  vs untuned -1.5 (-4.2 to +1.7) better in 5/7
+loop      5 WER  28.1%  by order [27.8 28.3]  [F03:16 F04:3 M01:49 M02:41 M03:5 M04:75 M05:26]  vs untuned -5.0 (-7.4 to -2.8) better in 5/7
+loop     10 WER  26.1%  by order [26.6 25.6]  [F03:15 F04:4 M01:41 M02:39 M03:4 M04:74 M05:24]  vs untuned -6.9 (-9.5 to -4.9) better in 4/7
+loop     20 WER  23.9%  by order [24.6 23.3]  [F03:13 F04:4 M01:42 M02:43 M03:3 M04:55 M05:22]  vs untuned -9.1 (-13.0 to -5.9) better in 6/7
+loop     30 WER  23.9%  by order [24.3 23.6]  [F03:15 F04:4 M01:38 M02:47 M03:3 M04:54 M05:21]  vs untuned -9.1 (-13.1 to -5.4) better in 4/7
+noise20  10 WER  27.1%  by order [27.1 27.2]  [F03:14 F04:3 M01:45 M02:41 M03:3 M04:80 M05:24]  vs untuned -5.9 (-7.9 to -4.3) better in 6/7
+noise20  30 WER  24.1%  by order [23.3 24.9]  [F03:14 F04:4 M01:42 M02:34 M03:3 M04:67 M05:22]  vs untuned -8.9 (-11.8 to -6.5) better in 6/7
+self     10 WER  29.5%  by order [30.3 28.8]  [F03:14 F04:4 M01:58 M02:43 M03:3 M04:84 M05:25]  vs untuned -3.5 (-5.7 to -1.8) better in 5/7
+self     30 WER  29.5%  by order [29.5 29.4]  [F03:14 F04:4 M01:58 M02:42 M03:3 M04:84 M05:25]  vs untuned -3.6 (-5.8 to -1.7) better in 7/7
+
+== sentences | arms up to 10 (all speakers): clip-runs 922, speakers ['F03', 'F04', 'M01', 'M02', 'M03', 'M04', 'M05']
+base      0 WER  27.8%  by order [28.1 27.5]  [F03:12 F04:2 M01:59 M02:42 M03:2 M04:83 M05:23]
+loop      1 WER  26.1%  by order [25.6 26.6]  [F03:12 F04:2 M01:56 M02:41 M03:1 M04:72 M05:22]  vs untuned -1.8 (-3.5 to -0.4) better in 5/7
+loop      3 WER  23.8%  by order [22.8 24.8]  [F03:11 F04:2 M01:48 M02:40 M03:1 M04:64 M05:21]  vs untuned -4.0 (-5.8 to -2.4) better in 6/7
+loop      5 WER  22.2%  by order [21.8 22.7]  [F03:12 F04:2 M01:43 M02:35 M03:3 M04:55 M05:22]  vs untuned -5.6 (-8.2 to -3.3) better in 5/7
+loop     10 WER  20.5%  by order [20.9 20.1]  [F03:12 F04:2 M01:34 M02:34 M03:2 M04:54 M05:20]  vs untuned -7.3 (-10.0 to -5.0) better in 5/7
+noise20  10 WER  21.7%  by order [21.5 21.8]  [F03:11 F04:1 M01:40 M02:36 M03:2 M04:61 M05:19]  vs untuned -6.2 (-8.3 to -4.3) better in 6/7
+self     10 WER  24.0%  by order [24.8 23.4]  [F03:12 F04:2 M01:52 M02:37 M03:1 M04:65 M05:20]  vs untuned -3.8 (-6.0 to -1.9) better in 6/7
+
+== sentences | all arms (speakers with 30 arrivals): clip-runs 922, speakers ['F03', 'F04', 'M01', 'M02', 'M03', 'M04', 'M05']
+base      0 WER  27.8%  by order [28.1 27.5]  [F03:12 F04:2 M01:59 M02:42 M03:2 M04:83 M05:23]
+loop      1 WER  26.1%  by order [25.6 26.6]  [F03:12 F04:2 M01:56 M02:41 M03:1 M04:72 M05:22]  vs untuned -1.8 (-3.5 to -0.4) better in 5/7
+loop      3 WER  23.8%  by order [22.8 24.8]  [F03:11 F04:2 M01:48 M02:40 M03:1 M04:64 M05:21]  vs untuned -4.0 (-5.8 to -2.4) better in 6/7
+loop      5 WER  22.2%  by order [21.8 22.7]  [F03:12 F04:2 M01:43 M02:35 M03:3 M04:55 M05:22]  vs untuned -5.6 (-8.2 to -3.3) better in 5/7
+loop     10 WER  20.5%  by order [20.9 20.1]  [F03:12 F04:2 M01:34 M02:34 M03:2 M04:54 M05:20]  vs untuned -7.3 (-10.0 to -5.0) better in 5/7
+loop     20 WER  19.2%  by order [19.0 19.4]  [F03:11 F04:2 M01:35 M02:33 M03:2 M04:49 M05:18]  vs untuned -8.6 (-11.5 to -6.2) better in 6/7
+loop     30 WER  18.5%  by order [18.8 18.2]  [F03:13 F04:2 M01:32 M02:30 M03:2 M04:48 M05:17]  vs untuned -9.4 (-12.1 to -6.9) better in 5/7
+noise20  10 WER  21.7%  by order [21.5 21.8]  [F03:11 F04:1 M01:40 M02:36 M03:2 M04:61 M05:19]  vs untuned -6.2 (-8.3 to -4.3) better in 6/7
+noise20  30 WER  19.3%  by order [19.2 19.4]  [F03:12 F04:1 M01:35 M02:30 M03:2 M04:54 M05:17]  vs untuned -8.5 (-11.1 to -6.3) better in 6/7
+self     10 WER  24.0%  by order [24.8 23.4]  [F03:12 F04:2 M01:52 M02:37 M03:1 M04:65 M05:20]  vs untuned -3.8 (-6.0 to -1.9) better in 6/7
+self     30 WER  24.0%  by order [23.9 24.2]  [F03:11 F04:1 M01:53 M02:37 M03:1 M04:65 M05:21]  vs untuned -3.8 (-6.2 to -1.7) better in 7/7
+
+== words | arms up to 10 (all speakers): clip-runs 840, speakers ['F03', 'F04', 'M01', 'M02', 'M03', 'M04', 'M05']
+base      0 WER  75.5%  by order [75.5 75.5]  [F03:48 F04:20 M01:97 M02:85 M03:13 M04:195 M05:70]
+loop      1 WER  89.0%  by order [88.4 89.5]  [F03:48 F04:16 M01:95 M02:86 M03:15 M04:193 M05:169]  vs untuned +13.4 (-1.4 to +35.6) better in 3/7
+loop      3 WER  94.9%  by order [102.4 87.4]  [F03:46 F04:17 M01:91 M02:82 M03:17 M04:242 M05:171]  vs untuned +19.4 (-2.0 to +47.6) better in 4/7
+loop      5 WER  75.8%  by order [77.2 74.3]  [F03:48 F04:18 M01:91 M02:83 M03:19 M04:195 M05:75]  vs untuned +0.2 (-2.4 to +2.7) better in 3/7
+loop     10 WER  71.9%  by order [73.4 70.3]  [F03:45 F04:23 M01:84 M02:75 M03:18 M04:191 M05:66]  vs untuned -3.7 (-7.1 to -0.4) better in 5/7
+noise20  10 WER  71.9%  by order [72.4 71.3]  [F03:43 F04:22 M01:85 M02:77 M03:17 M04:190 M05:69]  vs untuned -3.7 (-6.8 to -0.7) better in 5/7
+self     10 WER  74.2%  by order [75.1 73.4]  [F03:41 F04:21 M01:94 M02:82 M03:16 M04:195 M05:70]  vs untuned -1.3 (-3.4 to +0.7) better in 3/7
+
+== words | all arms (speakers with 30 arrivals): clip-runs 840, speakers ['F03', 'F04', 'M01', 'M02', 'M03', 'M04', 'M05']
+base      0 WER  75.5%  by order [75.5 75.5]  [F03:48 F04:20 M01:97 M02:85 M03:13 M04:195 M05:70]
+loop      1 WER  89.0%  by order [88.4 89.5]  [F03:48 F04:16 M01:95 M02:86 M03:15 M04:193 M05:169]  vs untuned +13.4 (-1.4 to +35.6) better in 3/7
+loop      3 WER  94.9%  by order [102.4 87.4]  [F03:46 F04:17 M01:91 M02:82 M03:17 M04:242 M05:171]  vs untuned +19.4 (-2.0 to +47.6) better in 4/7
+loop      5 WER  75.8%  by order [77.2 74.3]  [F03:48 F04:18 M01:91 M02:83 M03:19 M04:195 M05:75]  vs untuned +0.2 (-2.4 to +2.7) better in 3/7
+loop     10 WER  71.9%  by order [73.4 70.3]  [F03:45 F04:23 M01:84 M02:75 M03:18 M04:191 M05:66]  vs untuned -3.7 (-7.1 to -0.4) better in 5/7
+loop     20 WER  62.6%  by order [69.6 55.6]  [F03:40 F04:21 M01:88 M02:120 M03:15 M04:92 M05:62]  vs untuned -12.9 (-37.8 to +9.8) better in 4/7
+loop     30 WER  68.6%  by order [68.6 68.6]  [F03:42 F04:22 M01:80 M02:173 M03:14 M04:88 M05:59]  vs untuned -6.9 (-34.3 to +21.9) better in 4/7
+noise20  10 WER  71.9%  by order [72.4 71.3]  [F03:43 F04:22 M01:85 M02:77 M03:17 M04:190 M05:69]  vs untuned -3.7 (-6.8 to -0.7) better in 5/7
+noise20  30 WER  63.4%  by order [56.5 70.3]  [F03:39 F04:23 M01:89 M02:69 M03:16 M04:141 M05:67]  vs untuned -12.1 (-27.9 to -2.6) better in 5/7
+self     10 WER  74.2%  by order [75.1 73.4]  [F03:41 F04:21 M01:94 M02:82 M03:16 M04:195 M05:70]  vs untuned -1.3 (-3.4 to +0.7) better in 3/7
+self     30 WER  73.9%  by order [74.8 72.9]  [F03:41 F04:23 M01:96 M02:78 M03:12 M04:200 M05:67]  vs untuned -1.7 (-4.0 to +0.5) better in 5/7
+
+training time (s, on a shared GPU) and audio used:
+  loop      1 median train   11.4 s   median audio    7.3 s
+  loop      3 median train   19.9 s   median audio   19.6 s
+  loop      5 median train   32.6 s   median audio   32.8 s
+  loop     10 median train   66.7 s   median audio   63.3 s
+  loop     20 median train  101.0 s   median audio  128.8 s
+  loop     30 median train  101.9 s   median audio  209.0 s
+  noise20  10 median train   70.0 s   median audio   68.3 s
+  noise20  30 median train  103.0 s   median audio  206.8 s
+  self     10 median train   69.8 s   median audio   68.3 s
+  self     30 median train   99.3 s   median audio  206.8 s

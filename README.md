@@ -6,12 +6,13 @@ After a stroke, someone may know exactly what they want to say and still lose th
 
 Etherea is made by General Semantics, a creative research lab in New York. Most of these experiments were run by AI coding agents working under our direction. Every number below comes from the scripts in this repository.
 
-## The headline: a live recognizer for dysarthric speech
+## Our latest lead: tuning a live recognizer to each person
 
-Confucius4-R2T2, an open-weights streaming recognizer from NetEase Youdao, made a third fewer errors on dysarthric speech than the recognizer we used before. On sentences read by eight people with dysarthria and recognized in live streaming mode, it scored 34.6% word error against 50.8% for Nemotron 3.5 streaming as we had been running it. It answered every sentence, where Nemotron returned nothing for 113 of 714, and on typical speech it made 2.5% errors against 6.5%. It now runs Etherea's live speech recognition.
+Tuning Confucius4-R2T2 to each person might move the state of the art in live recognition. In our latest experiment, an adapter on the audio encoder of Confucius4-R2T2 (an open-weights streaming recognizer from NetEase Youdao), trained on 30 of each person's own sentences, cut live word error on 240 held-out sentences from the four TORGO speakers it understood worst from 54.6% to 48.5%. It's early: read speech, one training order, and three of the four speakers improved. Tuning its language model as well helped on whole recordings but made live recognition worse.
 
-- **Tuning it to one speaker works, if you tune the right part.** On 30 of a speaker's sentences, an adapter on its audio encoder alone cut live errors overall from 54.6% to 48.5% for the four speakers it understood worst. Tuning its language model as well helped on whole recordings but made live recognition worse.
-- **A list of likely words can help more.** Together with that tuning, a best-case list of likely words cut live errors to 38.4%, but only with a safeguard: the recognizer sometimes wrote the list itself into the transcript.
+In a separate best-case test, where a list of likely words held the words actually said, the list and the tuning together reached 38.4% from the same 54.6%, but only with a guard that falls back to the transcript made without the list; without it, every list made results worse.
+
+We haven't shown an advance over the best published systems. On this year's Speech Accessibility Project challenge leaderboard, the best streaming entry was at about 11.9% word error on November 1, with different speakers, so the numbers can't be compared. Next we test this recipe on that benchmark. For context: untuned, Confucius made 34.6% word error on dysarthric sentences in live streaming mode, against 50.8% for Nemotron 3.5 as we had been running it, and it now runs Etherea's live recognition.
 
 The tables and scripts are in [`dysarthria/`](dysarthria/#3-live-recognition-confucius4-r2t2-against-nemotron). Everything else we found is below.
 

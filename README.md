@@ -6,6 +6,15 @@ After a stroke, someone may know exactly what they want to say and still lose th
 
 Etherea is made by General Semantics, a creative research lab in New York. Most of these experiments were run by AI coding agents working under our direction. Every number below comes from the scripts in this repository.
 
+## The headline: a live recognizer for dysarthric speech
+
+Confucius4-R2T2, an open-weights streaming recognizer from NetEase Youdao, made a third fewer errors on dysarthric speech than the recognizer we used before. On sentences read by eight people with dysarthria and recognized in live streaming mode, it scored 34.6% word error against 50.8% for Nemotron 3.5 streaming as we had been running it. It answered every sentence, where Nemotron returned nothing for 113 of 714, and on typical speech it made 2.5% errors against 6.5%. It now runs Etherea's live speech recognition.
+
+- **Tuning it to one speaker works, if you tune the right part.** On 30 of a speaker's sentences, an adapter on its audio encoder alone cut live errors overall from 54.6% to 48.5% for the four speakers it understood worst. Tuning its language model as well helped on whole recordings but made live recognition worse.
+- **A list of likely words can help more.** Together with that tuning, a best-case list of likely words cut live errors to 38.4%, but only with a safeguard: the recognizer sometimes wrote the list itself into the transcript.
+
+The tables and scripts are in [`dysarthria/`](dysarthria/#3-live-recognition-confucius4-r2t2-against-nemotron). Everything else we found is below.
+
 ## What we've found so far
 
 ### Aphasia
